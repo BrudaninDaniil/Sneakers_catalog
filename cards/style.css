@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+  --accent-color: rgb(79, 83, 90);
+  --accent-color-hover: rgb(116, 119, 122);
+
+  --bgc-card-color-hover: #f1f1f1;
+
+  --text-color: #333;
+  --text-color-light: rgb(95, 95, 95);
+
+  --bgc-color: #ececec;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.page__body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bgc-color);
+}
+
+.list-reset {
+  list-style-type: none;
+}
+
+.button-reset {
+  border: none;
+  background-color: transparent;
+}
+
+.container {
+  max-width: 1070px;
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+/* Cards */
+.cards__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.card {
+  flex: 0 1 calc(100% / 4 - 30px * 3 / 4);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color .3s ease;
+  cursor: pointer;
+}
+.card:hover {
+  background-color: var(--bgc-card-color-hover);
+
+}
+
+.card__top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__img {
+  max-width: 100%;
+}
+
+.card__name {
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.card__description {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-color-light);
+}
+
+.card__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__price {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.card__buy-button {
+  padding: 4px 10px;
+  font-size: 24px;
+  color: white;
+  background-color: var(--accent-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color .3s ease;
+}
+
+.card__buy-button:hover {
+  background-color: var(--accent-color-hover);
+}
+
+@media (max-width: 1024px) {
+  .card {
+    flex: 0 1 calc(100% / 3 - 30px * 2 / 3);
+  }
+
+  .card__name, 
+  .card__description, 
+  .card__price {
+    font-size: 14px;
+  }
+
+  .card__buy-button {
+    padding: 2px 8px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 0 1 calc(100% / 2 - 30px * 1 / 2);
+  }
+
+  .card__name, 
+  .card__description, 
+  .card__price {
+    font-size: 12px;
+  }
+
+  .card__buy-button {
+    font-size: 18px;
+  }
+} 
+
+@media (max-width: 460px) {
+  .card {
+    flex: 0 1 100%;
+  }
+
+  .card__name, 
+  .card__description, 
+  .card__price {
+    font-size: 16px;
+  }
+
+  .card__buy-button {
+    font-size: 16px;
+  }
+} 
